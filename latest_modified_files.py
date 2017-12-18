@@ -5,7 +5,7 @@ def latest_modified_files(mod_within_days=0):
 	for src in src_dir:
 		for dirpath, dirname, filename in os.walk(src):
 	   		for fname in filename:
-	   			if fname.endswith(".py"):
+	   			#if fname.endswith(".py"):
 	   				path  = os.path.join(dirpath, fname)
 	   				mtime = datetime.datetime.fromtimestamp(os.stat(path).st_mtime)
 	   				ctime = datetime.datetime.fromtimestamp(os.stat(path).st_ctime)
